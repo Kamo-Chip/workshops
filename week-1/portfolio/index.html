@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio — Your Name</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Portfolio template" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="preloader" aria-label="Loading portfolio">
+      <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="container">
+        <a href="#" class="logo" aria-label="Home">YourName</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="controls">
+          <button id="theme-toggle" aria-label="Toggle theme" class="btn-icon">
+            🌓
+          </button>
+          <button id="menu-toggle" aria-label="Menu" class="btn-icon hamburger">
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav" aria-hidden="true">
+        <ul class="mobile-nav__list">
+          <li><a href="#about" class="mobile-nav__link">About</a></li>
+          <li><a href="#projects" class="mobile-nav__link">Projects</a></li>
+          <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="reveal">
+              Hi, I’m <span class="accent">Your Name</span>
+            </h1>
+            <p class="reveal delay-1">
+              I build elegant, performant web experiences with vanilla
+              JavaScript, HTML, and CSS.
+            </p>
+            <div class="reveal delay-2">
+              <a href="#projects" class="btn">See my work</a>
+              <a href="#contact" class="btn btn-outline">Get in touch</a>
+            </div>
+          </div>
+          <div class="hero__visual reveal delay-3">
+            <!-- placeholder graphic -->
+            <div class="visual-card">
+              <div class="code-window">
+                <div class="window-bar">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <pre><code>&lt;div&gt;Hello World&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="reveal">About me</h2>
+            <p class="reveal delay-1">
+              Wits student building thoughtful interfaces and tools.
+            </p>
+          </div>
+          <div class="cards">
+            <div class="card reveal delay-2">
+              <h3>What I do</h3>
+              <p>
+                Web development, interactive UI, and minimal frontend systems
+                with vanilla tech.
+              </p>
+            </div>
+            <div class="card reveal delay-2">
+              <h3>Skills</h3>
+              <p>
+                HTML, CSS (custom), JavaScript, accessibility, performance,
+                deployment (GitHub Pages / Vercel).
+              </p>
+            </div>
+            <div class="card reveal delay-2">
+              <h3>Process</h3>
+              <p>
+                Design small, build iteratively, ship early, learn from
+                feedback, repeat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="reveal">Projects</h2>
+            <div class="filters reveal delay-1">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="web">Web</button>
+              <button class="filter-btn" data-filter="ui">UI</button>
+              <button class="filter-btn" data-filter="tool">Tooling</button>
+            </div>
+          </div>
+          <div class="projects-grid">
+            <!-- project card template -->
+            <article class="project-card reveal" data-category="web">
+              <div class="project-inner">
+                <div class="thumb" aria-label="Flashcard app screenshot">
+                  <img src="#" alt="Flashcard app preview" loading="lazy" />
+                </div>
+                <div class="info">
+                  <h3>Flashcard Generator</h3>
+                  <p>
+                    Extracts key Q&A pairs from notes using an AI proxy. Built
+                    with fetch, vanilla DOM, and localStorage.
+                  </p>
+                  <div class="tags"><span>Web</span><span>Tool</span></div>
+                  <div class="actions">
+                    <a href="#" class="link">View</a>
+                    <a href="#" class="link">Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="ui">
+              <div class="project-inner">
+                <div class="thumb">
+                  <img src="#" alt="Portfolio screenshot" loading="lazy" />
+                </div>
+                <div class="info">
+                  <h3>Personal Portfolio</h3>
+                  <p>
+                    Responsive, animated portfolio with scroll reveals and theme
+                    toggle. Vanilla JS for interactivity.
+                  </p>
+                  <div class="tags"><span>UI</span><span>Web</span></div>
+                  <div class="actions">
+                    <a href="#" class="link">View</a>
+                    <a href="#" class="link">Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="tool">
+              <div class="project-inner">
+                <div class="thumb">
+                  <img src="#" alt="Tool preview" loading="lazy" />
+                </div>
+                <div class="info">
+                  <h3>Study Timer</h3>
+                  <p>
+                    Minimal Pomodoro-style timer with logging and localStorage
+                    persistence.
+                  </p>
+                  <div class="tags"><span>Tooling</span><span>Web</span></div>
+                  <div class="actions">
+                    <a href="#" class="link">View</a>
+                    <a href="#" class="link">Code</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="reveal">Contact</h2>
+            <p class="reveal delay-1">
+              Let’s build something. Drop a message or connect on GitHub
+            </p>
+          </div>
+          <form class="contact-form reveal delay-2" aria-label="Contact form">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="What are you working on?"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-left">
+          <span>&copy; <span id="year"></span> Your Name</span>
+        </div>
+        <div class="footer-right">
+          <a href="https://github.com/yourname" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
